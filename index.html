@@ -271,6 +271,7 @@
         let newContext = text.replace(context, '') + "<|im_end|>";
         console.log(newContext)
         context = context+newContext;
+        newContext=newContext.replace("<|im_end|>","")
         chatArray.push(newContext);
       }
 
