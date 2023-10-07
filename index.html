@@ -235,7 +235,7 @@
       });
 
       function enterInput(val) {
-        context = context + "<|im_start|>user\n" + val + "<|im_end|><|im_start|>assistant\n";
+        context = context + String.raw`<|im_start|>user\n${val}<|im_end|><|im_start|>assistant\n`;
         chatArray.push(val);
         callBot();
         updateChatView();
@@ -268,7 +268,7 @@
       }
 
       function updateContext(text) {
-        context = context + text+'<|im_end|>';
+        context = context + text;
         console.log(text);
         chatArray.push(text);
       }
