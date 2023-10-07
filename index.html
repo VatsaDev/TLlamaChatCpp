@@ -268,9 +268,10 @@
       }
 
       function updateContext(text) {
-        context = context + text.replace(context, '')+"<|im_end|>";
-        console.log(text.replace(context, ''));
-        chatArray.push(text.replace(context, ''));
+        let newContext = text.replace(context, '') + "<|im_end|>";
+        console.log(newContext)
+        context = context+newContext;
+        chatArray.push(newContext);
       }
 
       function updateChatView() {
