@@ -268,9 +268,9 @@
       }
 
       function updateContext(text) {
-        context = context + text;
-        console.log(text);
-        chatArray.push(text);
+        context = context + (text-context)+"<|im_end|>";
+        console.log(text-context);
+        chatArray.push(text-context);
       }
 
       function updateChatView() {
